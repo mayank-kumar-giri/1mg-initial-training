@@ -1,0 +1,30 @@
+ls - list all files and folders
+mv - move
+cp - copy
+rm - remove
+cat - print contents
+echo - print
+whoami - username
+pwd - parent working directory
+man - manual
+history
+alias - bind words to strings
+more - print 
+less - print
+find - search files
+grep - print sentences containing target
+cd - change directory
+mkdir - create folder
+rmdir - delete folder
+exit - exit terminal
+
+git init
+git add
+git commit
+git remote
+git branch
+git push
+git pull
+git log
+git status
+git clone
