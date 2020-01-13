@@ -3,11 +3,46 @@
 <head>
 	<title>Login/SignUp</title>
 	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<script type="text/javascript" src="js/index.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <body>
+	<div id="popup" style="display: none;">
+		Kindly fill the required fields!! xD
+	</div>
 	<div id="bg">
- 		Hello
+ 		<div id="mid">
+ 			<img class="img" src="logo.png" alt="Company Logo">
+ 			<p>Health Care</p>
+ 			<div id="in">
+ 				<form action="javascript:void()">
+ 					<input id="em" type="email" name="user_email" placeholder="Email"><br>
+ 					<input id="pass" type="password" name="user_password" placeholder="Password"><br><br>
+ 					<input type="checkbox" id="rem" name="rem"><label for="rem" class="remember">Remember me</label>
+ 					<label class="forgot">Forgot Password?</label>
+ 					<button id="login" type="Submit">LOGIN</button><br>
+ 					<label class="newacc">Create Account</label>
+ 				</form>
+ 				
+ 			</div>
+ 		</div>
 	</div>
 </body>
+<script type="text/javascript">	
+	$("#login").on('click keypress', function() {
+		const email = $('#em').val();
+		const password = $('#pass').val();
+		
+		if(email=="" || password=="") 
+		{
+			$("#popup").fadeIn(900, function() {
+				setTimeout(function() {
+				
+				$("#popup").fadeOut(900)
+				}, 800);
+			})
+				
+		}
+	});
+
+</script>
 </html>
