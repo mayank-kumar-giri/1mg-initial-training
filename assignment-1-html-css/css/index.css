@@ -77,7 +77,7 @@ body {
   color: lightgrey;
 }
 
-#popup {
+.popup {
 	height: 5vh;
 	width: 90vw;
 	background-color: #3377ff;
