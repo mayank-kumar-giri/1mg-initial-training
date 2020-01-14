@@ -12,14 +12,17 @@
 	<div class="popup" id="passfill" style="display: none;">
 		Kindly fill the password!
 	</div>
+	<div class="popup" id="bothfill" style="display: none;">
+		Kindly fill both the required fields! 
+	</div>
 	<div id="bg">
  		<div id="mid">
  			<img class="img" src="logo.png" alt="Company Logo">
  			<p>Health Care</p>
  			<div id="in">
  				<form action="javascript:void()">
- 					<input id="em" type="email" name="user_email" placeholder="Email"><br>
- 					<input id="pass" type="password" name="user_password" placeholder="Password"><br><br>
+ 					<input id="em" type="email" name="user_email" placeholder="Email" required><br>
+ 					<input id="pass" type="password" name="user_password" placeholder="Password" required><br><br>
  					<input type="checkbox" id="rem" name="rem"><label for="rem" class="remember">Remember me</label>
  					<label class="forgot">Forgot Password?</label>
  					<button id="login" type="Submit">LOGIN</button><br>
@@ -35,7 +38,19 @@
 		const email = $('#em').val();
 		const password = $('#pass').val();
 		
-		if(email=="") 
+		if(email=="" && password=="") 
+		{
+			$("#bothfill").fadeIn(900, function() {
+				setTimeout(function() {
+				
+				$("#bothfill").fadeOut(900)
+				}, 800);
+			})
+				
+		}		
+
+
+		else if(email=="") 
 		{
 			$("#emailfill").fadeIn(900, function() {
 				setTimeout(function() {
@@ -45,7 +60,8 @@
 			})
 				
 		}
-		if(password=="") 
+		
+		else if(password=="") 
 		{
 			$("#passfill").fadeIn(900, function() {
 				setTimeout(function() {
